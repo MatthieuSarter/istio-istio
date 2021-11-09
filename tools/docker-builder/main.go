@@ -67,7 +67,7 @@ var rootCmd = &cobra.Command{
 			return fmt.Errorf("--push and --save are mutually exclusive")
 		}
 		_, inCI := os.LookupEnv("CI")
-		if (args.Hub == "docker.io/istio" || args.Hub == "istio" || args.Hub == "gcr.io/istio-release") && !inCI {
+		if args.Push && (args.Hub == "docker.io/istio" || args.Hub == "istio" || args.Hub == "gcr.io/istio-release") && !inCI {
 			// Safety check against developer error. If they have a legitimate use case, they can set CI var
 			return fmt.Errorf("pushing to official registry only supported in CI")
 		}
