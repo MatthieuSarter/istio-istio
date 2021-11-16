@@ -38,6 +38,9 @@ function may_copy_into_arch_named_sub_dir() {
       *x86-64*)
         mkdir -p "${DOCKER_WORKING_DIR}/amd64/" && cp -rp "${FILE}" "${DOCKER_WORKING_DIR}/amd64/"
         ;;
+      *PowerPC*)
+        mkdir -p "${DOCKER_WORKING_DIR}/ppc64le/" && cp -rp "${FILE}" "${DOCKER_WORKING_DIR}/ppc64le/"
+        ;;
       *aarch64*)
         mkdir -p "${DOCKER_WORKING_DIR}/arm64/" && cp -rp "${FILE}" "${DOCKER_WORKING_DIR}/arm64/"
         ;;

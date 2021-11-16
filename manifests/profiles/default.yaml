@@ -3,7 +3,7 @@ kind: IstioOperator
 metadata:
   namespace: istio-system
 spec:
-  hub: gcr.io/istio-testing
+  hub: docker.io/matthieusarter
   tag: latest
 
   # You may override parts of meshconfig by uncommenting the following lines.
